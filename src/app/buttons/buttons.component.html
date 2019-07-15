@@ -1,0 +1,36 @@
+<mat-card>
+  <div class="example-container">
+    <div class="buttondiv" ng-init="escapeKeyInit(tooltip1,tooltip2)">
+      <button
+        type="button"
+        #tooltip1="matTooltip"
+        (mouseenter)="$event.stopImmediatePropagation()"
+        (mouseleave)="$event.stopImmediatePropagation()"
+        matTooltip="Info about the button1"
+        mdTooltipHideDelay="1000"
+        class="button1"
+        (click)="onButton1(tooltip1, tooltip2)"
+        mat-raised-button
+        style="float: left;"
+        color="primary"
+      >
+        Button1
+      </button>
+      <button
+        type="button"
+        #tooltip2="matTooltip"
+        (mouseenter)="$event.stopImmediatePropagation()"
+        (mouseleave)="$event.stopImmediatePropagation()"
+        matTooltip="Info about the button2"
+        class="button2"
+        (click)="onButton2(tooltip1, tooltip2)"
+        mdTooltipHideDelay="1000"
+        mat-raised-button
+        style="float: left;"
+        color="primary"
+      >
+        Button2
+      </button>
+    </div>
+  </div>
+</mat-card>
